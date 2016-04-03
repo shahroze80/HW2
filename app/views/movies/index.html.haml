@@ -1,4 +1,3 @@
--#  This file is app/views/movies/index.html.haml
 %h1 All Movies
 
 = form_tag movies_path, :method => :get do
@@ -19,7 +18,7 @@
       %th More Info
   %tbody
     - @movies.each do |movie|
-      %tr
+      %tr        
         %td= movie.title 
         %td= movie.rating
         %td= movie.release_date
@@ -28,3 +27,12 @@
 = link_to 'Add new movie', new_movie_path
 = link_to 'Update a movie', movies_update_path
 = link_to 'Delete a movie', movies_delete_path
+
+%section#ib-container.ib-container
+  - @movies.each do |movie|
+    %article
+      %header
+        %h3
+          %a= link_to "#{movie.title}", movie_path(movie)
+        %span= movie.rating
+      %p= movie.release_date
