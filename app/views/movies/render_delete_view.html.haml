@@ -1,0 +1,23 @@
+
+%h1 Delete a Movie
+
+= form_tag movies_delete_path, :method => :put do
+
+	%h2 Enter movie title to delete
+	= label :movie, :title, 'Title'
+	= text_field :movie, :title
+
+	= submit_tag 'Delete Title'
+
+	%h2 Or Choose the ratings from below to delete the corresponding movies
+	Include: 
+	- @all_ratings.each do |rating|
+		= rating
+		= check_box_tag "ratings[#{rating}]"
+
+	= submit_tag 'Delete Ratings'
+
+
+%br 
+%br
+= link_to 'Back to movie list', movies_path

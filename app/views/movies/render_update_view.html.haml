@@ -1,0 +1,13 @@
+
+%h1 Update a Movie
+
+= form_tag movies_update_path, :method => :put do
+
+  %h2 Enter movie to search
+  = label :movie, :title, 'Title'
+  = text_field :movie, :title
+
+  = submit_tag 'Search'
+  %br 
+  %br
+  = link_to 'Back to movie list', movies_path
