@@ -16,6 +16,7 @@ a {
   text-decoration: underline;
   font-weight: bold;
 }
+
 h1 {
   color: maroon;
   font-size: 150%;
@@ -24,6 +25,7 @@ h1 {
   width: 100%;
   border-bottom: 1px solid DarkSlateGrey;
 }
+
 h1.title {
   margin: 0 0 1em;
   padding: 10px;

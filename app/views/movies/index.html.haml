@@ -33,6 +33,23 @@
     %article
       %header
         %h3
-          %a= link_to "#{movie.title}", movie_path(movie)
+          %a.nice-link
+            = link_to "#{movie.title}", movie_path(movie)
         %span= movie.rating
       %p= movie.release_date
+
+
+%section
+  %h1
+    %a.nice-link= link_to 'Add new movie', new_movie_path
+  %p
+    Lorem ipsum dolor sit amet, consectetur
+    %a.nice-link{:href => "#"} adipiscing
+    elit fusce vel sapien elit in malesuada semper mi,
+    id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
+    Lorem ipsum dolor sit amet,
+    %a.nice-link{:href => "#"} consectetur
+    adipiscing elit fusce vel sapien elit in malesuada semper mi,
+    id
+    %a.nice-link{:href => "#"} sollicitudin urna fermentum ut fusce
+    varius nisl ac ipsum gravida vel pretium tellus.
